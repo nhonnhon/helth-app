@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  @apply text-gray-400;
+}
+
+:root {
+  --scrollbar-primary: #777777;
+  --scrollbar-secondary: #FFCC21;
+}
+
+/* Firefox */
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-primary) var(--scrollbar-secondary);
+}
+
+/* Chrome, Edge, and Safari */
+.scrollbar::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 3px;
+  height: 34px;
+}
+.scrollbar::-webkit-scrollbar-track {
+  background: var(--scrollbar-primary);
+  border-radius: 3px;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-secondary);
+  border-radius: 3px;
+}

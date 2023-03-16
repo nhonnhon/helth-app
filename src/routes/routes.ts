@@ -1,0 +1,16 @@
+export const ROUTE_PATHS = {
+  MY_RECORDS: '/my-records',
+  COLUMNS: '/columns',
+  CHALLENGES: '/challenges',
+  NOTIFICATIONS: '/notifications',
+  CHARTS: '/charts',
+  TARGETS: '/targets',
+  COURSES: '/courses',
+  SETTINGS: '/settings',
+  REGISTER: '/register',
+  OPERATING_COMPANY: '/operating-company',
+  TERMS: '/terms',
+  INFORMATION: '/information',
+  LAW: '/law',
+  INVESTIGATION: '/investigation',
+} as const;
