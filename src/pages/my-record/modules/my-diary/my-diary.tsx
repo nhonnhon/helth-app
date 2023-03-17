@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { useFetchMyDiaries } from '@/api/queries';
-import { Button } from '@/components/common';
+import { ButtonLoadMore } from '@/components/button-loadmore';
 import { SECTION_ID } from '@/constants/my-record.constant';
 
 import { MyDiaryItem } from './my-diary-item';
@@ -14,10 +14,6 @@ export const MyDiary: React.FC = () => {
   const dataDiaries = React.useMemo(() => {
     return convertDataDiaries(data?.pages);
   }, [data]);
-
-  const handleLoadMore = () => {
-    fetchNextPage();
-  };
 
   return (
     <div className="flex w-full flex-col" id={SECTION_ID.myDiary}>
@@ -32,13 +28,11 @@ export const MyDiary: React.FC = () => {
       </div>
 
       {hasNextPage ? (
-        <Button
-          className="mt-[30px] self-center"
+        <ButtonLoadMore
           disabled={isFetching || isFetchingNextPage}
-          onClick={handleLoadMore}
-        >
-          {isFetchingNextPage ? '読み込み中...' : '自分の日記をもっと見る'}
-        </Button>
+          isFetchingNextPage={isFetchingNextPage}
+          onClick={() => fetchNextPage()}
+        />
       ) : null}
     </div>
   );

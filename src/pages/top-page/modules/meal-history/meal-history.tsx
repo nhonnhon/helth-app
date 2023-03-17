@@ -1,10 +1,11 @@
 import * as React from 'react';
 
 import { useFetchMealHistories } from '@/api/queries';
-import { Button } from '@/components/common';
+import { ButtonLoadMore } from '@/components/button-loadmore';
 import { FilterButton } from '@/components/filter-button';
 import { CupIcon, KnifeIcon } from '@/components/icons';
-import { MEAL_TYPES } from '@/data';
+import { TimeImage } from '@/components/time-image';
+import { MEAL_TYPES } from '@/constants/top-page.constant';
 
 import { convertDataMealHistories } from './util';
 
@@ -59,9 +60,7 @@ export const MealHistory: React.FC = () => {
                     className="h-[234px] w-[234px] object-cover"
                   />
                 </picture>
-                <figcaption className="absolute left-0 bottom-0 bg-primary-300 px-[10px] py-[7px] font-inter text-[15px] font-normal leading-[18px] tracking-[0.15px] text-white">
-                  {date ? <time className="ml-[6px]">{date}</time> : null}
-                </figcaption>
+                <TimeImage date={date} />
               </figure>
             ))
           ) : (
@@ -70,13 +69,11 @@ export const MealHistory: React.FC = () => {
         </div>
 
         {hasNextPage ? (
-          <Button
-            className="mt-[28px]"
+          <ButtonLoadMore
             disabled={isFetching || isFetchingNextPage}
+            isFetchingNextPage={isFetchingNextPage}
             onClick={() => fetchNextPage()}
-          >
-            {isFetchingNextPage ? '読み込み中...' : '記録をもっと見る'}
-          </Button>
+          />
         ) : null}
       </div>
     </div>
