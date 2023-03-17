@@ -1,0 +1,13 @@
+.filter-button {
+  width: 134px;
+  height: 116px;
+}
+
+.filter-button::before {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  transform: rotate(-90deg);
+  width: 134px;
+  height: 116px;
+  z-index: -1;
+  @apply bg-gradient-yellowred;
+}

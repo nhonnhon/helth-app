@@ -28,6 +28,16 @@ module.exports = {
         'btn-gradient':
           'linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%)',
       },
+      keyframes: {
+        progressSVG: {
+          '0%': {
+            'stroke-dasharray': '0 100',
+          },
+        },
+      },
+      animation: {
+        progressSVG: 'progressSVG 1s ease-out forwards',
+      },
     },
     screens: {
       md: '960px',

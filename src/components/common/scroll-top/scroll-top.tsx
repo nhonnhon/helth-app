@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { ArrowUpIcon } from '@/components/icons';
+import { COLOR_CONST } from '@/constants/color.constant';
 
 const HEIGHT_NAVBAR = 300;
 
@@ -55,7 +56,7 @@ export const ScrollTop: React.FC = () => {
       onBlur={handleOnBlur}
       onClick={goToTop}
     >
-      <ArrowUpIcon fill={isHover ? '#FFFFFF' : '#777777'} />
+      <ArrowUpIcon fill={isHover ? '#FFFFFF' : COLOR_CONST.gray_400} />
     </button>
   ) : null;
 };
