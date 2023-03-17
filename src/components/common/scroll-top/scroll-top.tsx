@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { ArrowUpIcon } from '@/components/icons';
+import { COMMON_CLASS } from '@/constants/class.constant';
 import { COLOR_CONST } from '@/constants/color.constant';
 
 const HEIGHT_NAVBAR = 300;
@@ -49,7 +50,7 @@ export const ScrollTop: React.FC = () => {
 
   return showScrollBtn ? (
     <button
-      className="fixed bottom-[160px] right-[96px] flex h-[48px] w-[48px] items-center justify-center rounded-[50%] border border-gray-400 hover:border-none hover:bg-primary-400"
+      className={`fixed bottom-[160px] right-[96px] h-[48px] w-[48px] ${COMMON_CLASS.flexCenterBetween} rounded-[50%] border border-gray-400 hover:border-none hover:bg-primary-400`}
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
       onFocus={handleOnFocus}

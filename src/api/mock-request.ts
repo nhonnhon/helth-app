@@ -2,7 +2,7 @@ import { AxiosInstance } from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 
 import { API_ENDPOINTS } from '@/configs/endpoint';
-import { MEAL_HISTORIES } from '@/data';
+import { MEAL_HISTORIES, RECORD_MY_DIARIES } from '@/data';
 
 const mockRequest = (axios: AxiosInstance) => {
   const mock = new MockAdapter(axios, {
@@ -10,6 +10,7 @@ const mockRequest = (axios: AxiosInstance) => {
   });
 
   mock.onGet(API_ENDPOINTS.MEAL_HISTORIES).reply(200, MEAL_HISTORIES);
+  mock.onGet(API_ENDPOINTS.MY_DIARIES).reply(200, RECORD_MY_DIARIES);
 };
 
 export default mockRequest;
