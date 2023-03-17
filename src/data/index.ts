@@ -63,3 +63,18 @@ export const MEAL_HISTORIES = Array.from({ length: 30 }).map(() => ({
   types: getRandomItemInArray(MEAL_TYPES),
   createdAt: getRandomDate(new Date(2022, 0, 1), new Date()),
 }));
+
+export const RECORD_MY_EXERCISE = Array.from({ length: 30 }).map(() => ({
+  id: uuidv4(),
+  title: '家事全般（立位・軽い）',
+  calory: '26kcal',
+  duration: '10 min',
+}));
+
+export const RECORD_MY_DIARIES = Array.from({ length: 30 }).map(() => ({
+  id: uuidv4(),
+  createdAt: getRandomDate(new Date(2022, 0, 1), new Date()),
+  title: '私の日記の記録が一部表示されます。',
+  description:
+    'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…',
+}));

@@ -2,10 +2,10 @@ export const getRandomItemInArray = (items: any[]): any => {
   return items[Math.floor(Math.random() * items.length)];
 };
 
-export const getRandomDate = (start: Date, end: Date) => {
+export const getRandomDate = (start: Date, end: Date): string => {
   return new Date(
     start.getTime() + Math.random() * (end.getTime() - start.getTime())
-  );
+  ).toISOString();
 };
 
 export function addPaginationAndFilter(
