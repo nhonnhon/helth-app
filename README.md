@@ -17,8 +17,8 @@ npm ^8.19.2
 - and some libraries:
   - [React Router V6](https://reactrouter.com/en/main) client side routing
   - [React Query](https://tanstack.com/query/latest/docs/react/overview) and [axios](https://axios-http.com/) handle API
-  - fontsource get font for project
-  - recharts for handle chart/graph 
+  - `fontsource` get font for project
+  - `recharts` for handle chart/graph 
   - ...
 
 ## Getting started
