@@ -4,7 +4,7 @@ Health Web App Test build with ReactJS + TailwindCSS.
 
 ## Requirements
 
-[NodeJs](https://nodejs.org/en/) ^16.14.0
+[NodeJs](https://nodejs.org/en/) ^16.14.0  
 npm ^8.19.2
 
 ## Technologies
@@ -96,5 +96,5 @@ health-app
 
 ## LICENSE
 
-MIT License
+MIT License  
 Project Test - Copyright (c) 2023 Nhon Nguyen
