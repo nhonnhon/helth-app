@@ -17,6 +17,9 @@ npm ^8.19.2
 - and some libraries:
   - [React Router V6](https://reactrouter.com/en/main) client side routing
   - [React Query](https://tanstack.com/query/latest/docs/react/overview) and [axios](https://axios-http.com/) handle API
+  - fontsource get font for project
+  - recharts for handle chart/graph 
+  - ...
 
 ## Getting started
 
@@ -56,7 +59,7 @@ There are three pages with following link below:
 - [My Record Page](http://localhost:3000/my-records)
 - [Column Page](http://localhost:3000/columns)
 
-Other routes will go to NotFoundPage
+Other routers will go to NotFoundPage
 
 ## Folder Structure
 
